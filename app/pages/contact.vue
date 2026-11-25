@@ -5,21 +5,23 @@ const name=ref('')
 const phone=ref('')
 function sendInvite(){
   if(!name.value.trim() || !phone.value.trim()) return
-  const base=window.location.origin+'/?to='+encodeURIComponent(name.value.trim())
-  const text=`Assalamu'alaikum / Salam hangat 🙏
+  const base=window.location.origin+'?to='+encodeURIComponent(name.value.trim())
+  const text=` Salam Sejahtera\n
+Dengan penuh sukacita, kami mengundang *${name.value}* untuk menghadiri pernikahan kami:\n
+*Berikut link undangan kami* untuk info lengkap mengenai undangan kami, dapat mengunjungi:\n
+${base}\n
+Merupakan suatu kebahagian bagi kami apabila berkenan untuk hadir dan memberikan doa restu secara langsung.\n
+*Mohon maaf perihal undangan hanya di bagikan melalui pesan ini.*
 
-Dengan penuh sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami:
-
-Tius & Hania
+Timotius & Hania
 19 Desember 2026
-
-Undangan: ${base}`
+`
   window.open(`https://wa.me/${phone.value.replace(/\D/g,'')}?text=${encodeURIComponent(text)}`,'_blank')
 }
 </script>
 
 <template>
-  <main class="contact-page"><NuxtLink to="/" class="back"><ArrowLeft :size="18"/>Undangan</NuxtLink><div class="contact-card"><p class="eyebrow">Personal Invitation</p><h1>Buat Undangan</h1><p class="lead">Masukkan nama dan nomor WhatsApp tamu untuk membuat tautan undangan pribadi.</p><form @submit.prevent="sendInvite"><label>Nama Tamu<input v-model="name" placeholder="Contoh: Albert Mandaya" required/></label><label>Nomor WhatsApp<input v-model="phone" inputmode="tel" placeholder="628123456789" required/></label><button type="submit"><Send :size="18"/>Kirim via WhatsApp</button></form></div></main>
+  <main class="contact-page"><NuxtLink to="/" class="back"><ArrowLeft :size="18"/>Undangan</NuxtLink><div class="contact-card"><p class="eyebrow">Personal Invitation</p><h1>Buat Undangan</h1><p class="lead">Masukkan nama dan nomor WhatsApp tamu untuk membuat tautan undangan pribadi.</p><form @submit.prevent="sendInvite"><label>Nama Tamu<input v-model="name" placeholder="Contoh: Andika" required/></label><label>Nomor WhatsApp<input v-model="phone" inputmode="tel" placeholder="628123456789" required/></label><button type="submit"><Send :size="18"/>Kirim via WhatsApp</button></form></div></main>
 </template>
 
 <style scoped>

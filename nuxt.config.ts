@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Undangan pernikahan Tius & Hania — Sabtu, 19 Desember 2026' },
         { property: 'og:title', content: 'The Wedding of Tius & Hania' },
         { property: 'og:description', content: 'Dengan penuh suka cita, kami mengundang Anda untuk merayakan hari bahagia kami.' },
-        { property: 'og:image', content: '/images/hero.jpeg' },
+        { property: 'og:image', content: `${process.env.APP_URL}/images/hero.jpeg` },
         { property: 'og:type', content: 'website' }
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }]
