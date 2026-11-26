@@ -24,12 +24,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
+      title: 'The Wedding of Tius & Hania',
       meta: [
         { name: 'description', content: 'Undangan pernikahan Tius & Hania — Sabtu, 19 Desember 2026' },
         { property: 'og:title', content: 'The Wedding of Tius & Hania' },
         { property: 'og:description', content: 'Dengan penuh suka cita, kami mengundang Anda untuk merayakan hari bahagia kami.' },
         { property: 'og:image', content: new URL('/images/hero.jpeg', siteUrl).toString() },
-        { property: 'og:type', content: 'website' }
+        { property: 'og:image:type', content: 'image/jpeg' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: new URL('/', siteUrl).toString() },
+        { property: 'og:image:alt', content: 'Tius dan Hania' },
+        { name: 'twitter:card', content: 'summary_large_image' }
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }]
     }
