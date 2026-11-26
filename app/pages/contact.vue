@@ -6,8 +6,8 @@ const phone=ref('')
 function sendInvite(){
   if(!name.value.trim() || !phone.value.trim()) return
   const base=window.location.origin+'?to='+encodeURIComponent(name.value.trim())
-  const text=` Salam Sejahtera\n
-Dengan penuh sukacita, kami mengundang *${name.value}* untuk menghadiri pernikahan kami:\n
+  const text=` Salam Sejahtera,\n
+Dengan penuh sukacita, kami ingin mengundang Saudara/i *${name.value}* untuk menghadiri pernikahan kami:\n
 *Berikut link undangan kami* untuk info lengkap mengenai undangan kami, dapat mengunjungi:\n
 ${base}\n
 Merupakan suatu kebahagian bagi kami apabila berkenan untuk hadir dan memberikan doa restu secara langsung.\n

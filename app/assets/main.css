@@ -758,3 +758,7 @@ cursor: pointer
         bottom: 28px
     }
 }
+
+.nl-wrap {
+    display: none !important;
+}

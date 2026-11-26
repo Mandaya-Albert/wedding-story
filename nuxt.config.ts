@@ -1,3 +1,5 @@
+const siteUrl = process.env.NUXT_PUBLIC_APP_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || 'http://localhost:3001'
+
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -11,12 +13,12 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2026-11-25',
   devtools: { enabled: true },
-  // vite: {
-  //   server: {
-  //     host: '0.0.0.0',
-  //     allowedHosts: true
-  //   }
-  // },
+  vite: {
+    server: {
+      host: '0.0.0.0',
+      allowedHosts: true
+    }
+  },
   ssr: false,
   css: ['~/assets/main.css'],
   app: {
@@ -26,7 +28,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Undangan pernikahan Tius & Hania — Sabtu, 19 Desember 2026' },
         { property: 'og:title', content: 'The Wedding of Tius & Hania' },
         { property: 'og:description', content: 'Dengan penuh suka cita, kami mengundang Anda untuk merayakan hari bahagia kami.' },
-        { property: 'og:image', content: `${process.env.APP_URL}/images/hero.jpeg` },
+        { property: 'og:image', content: new URL('/images/hero.jpeg', siteUrl).toString() },
         { property: 'og:type', content: 'website' }
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }]

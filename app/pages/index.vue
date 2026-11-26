@@ -158,6 +158,9 @@ function handleTouchEnd(event:TouchEvent){
         <div class="verse-card reveal" data-aos="fade-up">
           <h3>Demikianlah tinggal ketiga hal ini, yaitu iman, pengharapan dan kasih, dan yang paling besar di antaranya ialah kasih.</h3>
           <p>1 Korintus 13:13</p>
+          <br>
+          <h3>Dan diatas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.</h3>
+          <p>Kolose 3:14</p>
         </div>
       </div>
     </section>
